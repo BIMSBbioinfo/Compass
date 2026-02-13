@@ -26,7 +26,9 @@ The [CompassDock](https://arxiv.org/abs/2406.06841) framework is a comprehensive
 ## Quickstart for CompassDock
 
 ```bash
-conda create --name CompassDock python=3.11 -c conda-forge
+conda create --name CompassDock python=3.11.10 -c conda-forge
+conda activate CompassDock
+conda install -c conda-forge 'setuptools=74.1.2' -y
 conda install -c ostrokach-forge reduce
 conda install -c conda-forge openbabel
 conda install -c conda-forge datamol
@@ -34,7 +36,7 @@ pip install compassdock
 pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.3.0+cu121.html
 pip install "fair-esm @ git+https://github.com/asarigun/esm.git"
 pip install "dllogger @ git+https://github.com/NVIDIA/dllogger.git"
-pip install "openfold @ git+https://github.com/asarigun/openfold.git"
+pip install --no-build-isolation "openfold @ git+https://github.com/asarigun/openfold.git"
 ```
 
 ```python
